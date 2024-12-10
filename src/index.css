@@ -4,3 +4,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+html {
+  font-size: 62.5%; /* needed for using 1rem === 10px in MIU css */
+}

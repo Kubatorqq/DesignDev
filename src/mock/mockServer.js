@@ -10,7 +10,7 @@ export const makeServer = () => {
       id: 1,
       name: 'Product name',
       description: 'Subtitle with basic ingredients',
-      rating: 4,
+      rating: 4.8,
       price: '$49.99',
       image: '/images/product-1.png',
       reviews: 12,

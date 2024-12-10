@@ -8,21 +8,29 @@ const theme = createTheme({
     secondary: {
       main: '#52B480',
     },
-    sunnyBgr: {
+    sunny: {
       main: '#FFEB3B',
     },
   },
   typography: {
     fontFamily: 'Raleway, Arial, sans-serif',
+    htmlFontSize: '1rem',
+    fontSize: '1.6rem',
     h2: {
-      fontSize: '40px',
+      fontSize: '4rem',
       fontWeight: 'bold',
       textAlign: 'center',
+      marginTop: '4rem',
+      marginBottom: '4rem',
       [createTheme().breakpoints.down('md')]: {
-        fontSize: '32px',
+        fontSize: '3.2rem',
+        marginTop: '3rem',
+        marginBottom: '3rem',
       },
       [createTheme().breakpoints.down('sm')]: {
-        fontSize: '24px',
+        fontSize: '2.4rem',
+        marginTop: '2rem',
+        marginBottom: '2rem',
       },
     },
   },
@@ -32,15 +40,25 @@ const theme = createTheme({
         body: {
           color: theme.palette.primary.main,
           backgroundColor: '#FFFFFF',
-          fontSize: '16px',
+          fontSize: '1.6rem',
         },
       }),
+    },
+    MuiTypography: {
+      styleOverrides: {
+        root: {
+          '&.MuiTypography-h1, &.MuiTypography-h2, &.MuiTypography-h3, &.MuiTypography-h4, &.MuiTypography-h5, &.MuiTypography-h6':
+            {
+              fontFamily: 'Nunito, Arial, sans-serif',
+            },
+        },
+      },
     },
     MuiGrid2: {
       styleOverrides: {
         root: {
           '@media (min-width: 1441px)': {
-            maxWidth: '1164px',
+            maxWidth: '1164px', // dle designu
           },
         },
       },
@@ -51,22 +69,12 @@ const theme = createTheme({
           background: theme.customStyles.gradient,
           color: '#FFFFFF',
           fontWeight: 700,
-          fontSize: '16px',
+          fontSize: '1.6rem',
           textTransform: 'none',
           borderRadius: theme.customStyles.borderRadiusSmall,
-          paddingTop: '14px',
-          paddingBottom: '14px',
-          lineHeight: '20px',
-        }),
-      },
-    },
-    MuiSvgIcon: {
-      styleOverrides: {
-        root: ({ theme }) => ({
-          fontSize: '34px',
-          '& path': {
-            fill: theme.palette.secondary.main,
-          },
+          paddingTop: '1.4rem',
+          paddingBottom: '1.4rem',
+          lineHeight: '2rem',
         }),
       },
     },
@@ -86,9 +94,9 @@ const theme = createTheme({
     gradientButton: 'linear-gradient(90deg, #FFB74D 0%, #FF9800 100%)',
     borderColor: '#52B480',
     borderColorLight: '#15151533',
-    borderRadiusSmall: '14px',
-    borderRadius: '20px',
-    boxShadow: '0px 0px 10px 0px rgba(0, 0, 0, 0.07)',
+    borderRadiusSmall: '1.4rem',
+    borderRadius: '2rem',
+    boxShadow: '0 0 1rem 0 rgba(0, 0, 0, 0.07)',
   },
 });
 

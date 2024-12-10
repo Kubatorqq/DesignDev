@@ -4,18 +4,18 @@ import { styled } from '@mui/system';
 
 const StyledToggleButton = styled(MuiToggleButton)(({ theme }) => ({
   border: '0',
-  borderRadius: theme.customStyles.borderRadiusSmall,
-  padding: '10px 40px',
+  borderRadius: `${theme.customStyles.borderRadiusSmall}!important`, // přetížení default stylů pro tuto komponentu - pro první button
+  padding: '1rem 4rem',
   fontWeight: 500,
-  fontSize: '1rem',
-  lineHeight: '20px',
+  fontSize: '1.6rem',
+  lineHeight: '2rem',
   textTransform: 'none',
   color: theme.palette.primary.main,
   '&.Mui-selected': {
     background: theme.customStyles.gradientButton,
     color: '#FFFFFF',
     fontWeight: 700,
-    margin: '-1px 0 -1px -1px', // hack pro překrytí borderu dle Figma
+    margin: '-0.1rem 0 -0.1rem -0.1rem', // hack pro překrytí borderu wrapu buttonů dle Figma
     '&:hover': {
       background: theme.customStyles.gradientButton,
       boxShadow: theme.customStyles.boxShadow,
@@ -41,9 +41,9 @@ export const ToggleButton = () => {
       exclusive
       onChange={handleChange}
       sx={(theme) => ({
-        border: `1px solid ${theme.customStyles.borderColorLight}`,
+        border: `0.1rem solid ${theme.customStyles.borderColorLight}`,
         borderRadius: theme.customStyles.borderRadiusSmall,
-        marginBottom: '40px',
+        marginBottom: '4rem',
       })}
     >
       <StyledToggleButton value='dogs'>For Dogs</StyledToggleButton>
